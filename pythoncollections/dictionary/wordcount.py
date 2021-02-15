@@ -1,0 +1,21 @@
+text="hello hai hello hai hello"
+words=text.split(" ")
+print(words)
+dict={}
+for word in words:
+    if word not in dict:
+        dict[word]=1
+    else:
+        dict[word]+=1
+print(dict)
+
+
+#print(max(dict))
+
+
+#print(dict.get("hello")),       #dict.get to fetch value
+#print(dict["hello"]
+
+print(max(dict,key=dict.get))
+
+print(sorted(dict,key=dict.get,reverse=True))

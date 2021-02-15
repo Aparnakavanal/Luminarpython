@@ -9,3 +9,8 @@ print(st)
 st2={100,200}
 st.update(st2)
 print(st)
+
+
+lst=[10,20,20,30]
+st=set(lst)
+print(st)
