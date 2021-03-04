@@ -27,3 +27,23 @@ sal=[]
 for emp in employees:
     sal.append(emp.sal)
 print(max(sal),ename)
+
+
+
+
+enames=list(map(lambda emp:emp.name.upper(),employees))
+print(enames)
+
+devl=(list(filter(lambda emp:emp.desig=="developer",employees)))
+name=list(map(lambda name:name.name,devl))
+print(name)
+
+expr=(list(filter(lambda emp:emp.exp>2,employees)))
+ex=list(map(lambda name:name.name.expr))
+print(ex)
+
+qacount=len(list(filter(lambda emp:emp.desig--"qa",employees)))
+print(qacount)
+
+
+#reduce
