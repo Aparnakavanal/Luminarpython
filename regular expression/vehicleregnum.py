@@ -1,13 +1,13 @@
-
-
 from re import *
 
-rule="KL[0-9]{2}[A-Z]{2}[0-9]{1,4}"
+rule="KL\d{2}[A-Z]{2}\d{1,4}"
+
 f=open("vehicleregnum","r")
-for lines in f:
-    # print(lines)
-    matcher=fullmatch(rule,lines)
+lst=[]
+
+for regno in f:
+    regno=regno.rstrip("\n")
+    matcher=fullmatch(rule,regno)
     if matcher != None:
-        print("valid variable name")
-    else:
-        print("invalid variable name")
+        lst.append(regno)
+print(lst)
